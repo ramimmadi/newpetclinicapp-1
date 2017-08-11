@@ -89,17 +89,30 @@ public class OwnerController {
 
         // find owners by last name
         Collection<Owner> results = this.clinicService.findOwnerByLastName(owner.getLastName());
-        if (results.isEmpty()) {
-            // no owners found
-            result.rejectValue("lastName", "notFound", "not found");
-            return "owners/findOwners";
-        } else if (results.size() == 1) {
+        Collection<Owner> results1 = this.clinicService.findOwnerByFirstName(owner.getFirstName());
+        if (results.size() == 1) {
             // 1 owner found
             owner = results.iterator().next();
             return "redirect:/owners/" + owner.getId();
+        } else if (results1.isEmpty()) {
+            // no owners found
+            result.rejectValue("firstName", "notFound", "not found");
+            return "owners/findOwners";
+        } else if (results1.size() == 1) {
+            // 1 owner found
+            owner = results1.iterator().next();
+            return "redirect:/owners/" + owner.getId();
+        } else if(results.size() != 1){
+            // multiple owners found
+                        model.put("selections", results);
+            return "owners/ownersList";
+        } else if (results.isEmpty()){
+            // no owners found
+            result.rejectValue("lastName", "notFound", "not found");
+            return "owners/findOwners";
         } else {
             // multiple owners found
-            model.put("selections", results);
+                        model.put("selections", results1);
             return "owners/ownersList";
         }
     }
