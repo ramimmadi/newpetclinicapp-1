@@ -1,9 +1,9 @@
-# Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-petclinic/spring-framework-petclinic.svg?branch=master)](https://travis-ci.org/spring-petclinic/spring-framework-petclinic/)
+# Spring PetClinic Sample Application.
 
 Approved by the Spring team, this repo is a fork of the [spring-projects/spring-petclinic](https://github.com/spring-projects/spring-petclinic).
 It allows the Spring community to maintain a Petclinic version with a plain old **Spring Framework configuration**
 and with a **3-layer architecture** (i.e. presentation --> service --> repository).
-The "canonical" implementation is now based on Spring Boot, Thymeleaf and [aggregate-oriented domain]([https://github.com/spring-projects/spring-petclinic/pull/200). 
+The "canonical" implementation is now based on Spring Boot, Thymeleaf and [aggregate-oriented domain]([https://github.com/spring-projects/spring-petclinic/pull/200).
 
 
 ## Understanding the Spring Petclinic application with a few diagrams
@@ -11,17 +11,19 @@ The "canonical" implementation is now based on Spring Boot, Thymeleaf and [aggre
 
 ## Running petclinic locally
 ```
-	git clone https://github.com/spring-petclinic/spring-framework-petclinic.git
-	cd spring-framework-petclinic
-	./mvnw tomcat7:run-war
+        git clone https://github.com/kgvprasad/newpetclinicapp.git
+        cd newpetclinicapp
+        mvn cliean install -Dmaven.test.skip=true
+
+Then deploy the pwtclinic.war file from target folder genarated on tomcat application server and access the same by using the application URL shown below.
 ```
 
-You can then access petclinic here: http://localhost:9966/petclinic/
+You can then access petclinic here: http://<IP OF TOMCAT SERVER>:8080/petclinic/
 
-<img width="1042" alt="petclinic-screenshot" src="https://cloud.githubusercontent.com/assets/838318/19727082/2aee6d6c-9b8e-11e6-81fe-e889a5ddfded.png">
+<img width="1042" alt="petclinic-screenshot" src="https://github.com/kgvprasad/newpetclinicapp/blob/master/petclinic_app-main-screen.JPG">
 
 ## In case you find a bug/suggested improvement for Spring Petclinic
-Our issue tracker is available here: https://github.com/spring-petclinic/spring-framework-petclinic/issues
+The issue tracker is available here: https://github.com/spring-petclinic/spring-framework-petclinic/issues
 
 
 ## Database configuration
@@ -34,7 +36,8 @@ To run petclinic locally using persistent database, it is needed to run with pro
 For MySQL database, it is needed to run with 'MySQL' profile defined in main pom.xml file.
 
 ```
-./mvnw tomcat7:run-war -P MySQL
+ Move the HSQLDB 's activation tag to MySQL in pom.xml and build the war file again using maven.
+
 ```
 
 Before do this, would be good to check properties defined in MySQL profile inside pom.xml file.
@@ -47,13 +50,8 @@ Before do this, would be good to check properties defined in MySQL profile insid
     <jdbc.username>root</jdbc.username>
     <jdbc.password>petclinic</jdbc.password>
 </properties>
-```      
-
-You may also start a MySql database with docker:
-
 ```
-docker run --name mysql-petclinic -e MYSQL_ROOT_PASSWORD=petclinic -e MYSQL_DATABASE=petclinic -p 3306:3306 mysql:5.7.8
-```
+
 
 For PostgreSQL database, it is needed to run with 'PostgreSQL' profile defined in main pom.xml file.
 
@@ -71,11 +69,6 @@ Before do this, would be good to check properties defined in PostgreSQL profile 
     <jdbc.username>postgres</jdbc.username>
     <jdbc.password>petclinic</jdbc.password>
 </properties>
-```
-You may also start a Postgres database with docker:
-
-```
-docker run --name postgres-petclinic -e POSTGRES_PASSWORD=petclinic -e POSTGRES_DB=petclinic -p 5432:5432 -d postgres:9.6.0
 ```
 
 ## Working with Petclinic in Eclipse/STS
