@@ -87,7 +87,7 @@ If m2e is not there, just follow the install process here: http://eclipse.org/m2
 
 1) In the command line
 ```
-git clone https://github.com/spring-petclinic/spring-framework-petclinic.git
+git clone https://github.com/kgvprasad/newpetclinicapp.git
 ```
 2) Inside Eclipse
 ```
