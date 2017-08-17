@@ -42,7 +42,8 @@ public interface OwnerRepository {
      */
     Collection<Owner> findByLastName(String lastName) throws DataAccessException;
     Collection<Owner> findByFirstName(String firstName) throws DataAccessException;
-
+    Collection<Owner> findByCity(String city) throws DataAccessException;
+    
     /**
      * Retrieve an <code>Owner</code> from the data store by id.
      *
