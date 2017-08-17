@@ -74,7 +74,7 @@ public class ClinicServiceImpl implements ClinicService {
 	
     @Override
     @Transactional(readOnly = true)
-    public Collection<Owner> findByCity(String city) throws DataAccessException {
+    public Collection<Owner> findOwnerByCity(String city) throws DataAccessException {
         return ownerRepository.findByCity(city);
     }	
 
