@@ -89,26 +89,16 @@ public class OwnerController {
 
         // find owners by last name
         Collection<Owner> results = this.clinicService.findOwnerByLastName(owner.getLastName());
-        // find owners by City
-        Collection<Owner> results2 = this.clinicService.findOwnerByCity(owner.getCity());
         
         Collection<Owner> results1 = this.clinicService.findOwnerByFirstName(owner.getFirstName());
-        if (results.size() == 1) {
+        
+	// find owners by City
+        Collection<Owner> results2 = this.clinicService.findOwnerByCity(owner.getCity());
+        
+	if (results.size() == 1) {
             // 1 owner found
             owner = results.iterator().next();
             return "redirect:/owners/" + owner.getId();
-        } else if (results2.isEmpty()) {
-            // no owners found
-            result.rejectValue("city", "notFound", "not found");
-            return "owners/findOwners";
-        } else if (results2.size() == 1) {
-            // 1 owner found
-            owner = results2.iterator().next();
-            return "redirect:/owners/" + owner.getId();         
-        } else if(results2.size() != 1){
-            // multiple owners found
-                        model.put("selections", results);
-            return "owners/ownersList";
         }else if (results1.isEmpty()) {
             // no owners found
             result.rejectValue("firstName", "notFound", "not found");
@@ -117,19 +107,25 @@ public class OwnerController {
             // 1 owner found
             owner = results1.iterator().next();
             return "redirect:/owners/" + owner.getId();
-        } else if(results.size() != 1){
-            // multiple owners found
-            model.put("selections", results);
-            return "owners/ownersList";
         } else if (results.isEmpty()){
             // no owners found
             result.rejectValue("lastName", "notFound", "not found");
             return "owners/findOwners";
-        } else {
-            // multiple owners found
-            model.put("selections", results1);
-            return "owners/ownersList";
-        }
+        }else {
+		if(results2.isEmpty()) {
+            		// no owners found
+            		result.rejectValue("firstName", "notFound", "not found");
+            		return "owners/findOwners";
+        	} else if (results2.size() == 1) {
+            		// 1 owner found
+            		owner = results2.iterator().next();
+           		return "redirect:/owners/" + owner.getId();
+        	} else {
+            		// multiple owners found
+           	 	model.put("selections", results2);
+            		return "owners/ownersList";
+       		 }
+	}
     }
 
     @RequestMapping(value = "/owners/{ownerId}/edit", method = RequestMethod.GET)

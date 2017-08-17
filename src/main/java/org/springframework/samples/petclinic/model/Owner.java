@@ -146,7 +146,7 @@ public class Owner extends Person {
             .append("lastName", this.getLastName())
             .append("firstName", this.getFirstName())
             .append("address", this.address)
-            .append("city", this.city)
+            .append("city", this.getCity())
             .append("telephone", this.telephone)
             .toString();
     }
