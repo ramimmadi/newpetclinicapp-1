@@ -7,7 +7,7 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <img  src="resources/images/Picture1.png" th:src="@{/resources/images/Picture1.png}" width="150" height="80" alt="petclinic"/>
+	 <a class="navbar-brand" href="<spring:url value="/" htmlEscape="true" />"><span></span></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
                 <span class="sr-only"><os-p>Toggle navigation</os-p></span>
                 <span class="icon-bar"></span>

@@ -10,7 +10,7 @@
     <h2>Find Owners</h2>
     <br>
     <br>
-    <table style="width:100%" background="resources/images/owner.jpg" th:background="@{/resources/images/owner.jpg}">
+    <table style="width:100%" background="../resources/images/owner.jpg" th:background="@{../resources/images/owner.jpg}">
         <tr>
             <th>
                 <br>
