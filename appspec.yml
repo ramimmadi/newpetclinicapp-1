@@ -17,7 +17,6 @@ hooks:
       runas: root
     - location: scripts/load.sh
       runas: root
-   AfterInstall:
-    - location: scripts/imagecpy.sh
+   AfterInstall:   
     - location: scripts/restart.sh
       runas: root
