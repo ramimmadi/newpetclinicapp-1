@@ -21,4 +21,3 @@ artifacts:
     - 'appspec.yml'
     - 'scripts/restart.sh'
     - 'scripts/load.sh'
-    - 'scripts/imagecpy.sh'
