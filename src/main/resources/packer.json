@@ -12,7 +12,10 @@
     "source_ami": "ami-246ed34c",
     "instance_type": "t1.micro",
     "ssh_username": "ec2-user",
-    "ami_name": "petclinic-latest"
+    "ami_name": "petclinic-latest",
+      "tags": {
+          "Name": "petclinic-latest" 
+        }    
   }],
   "provisioners": [{
     "type": "shell",
