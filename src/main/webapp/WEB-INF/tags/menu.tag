@@ -33,6 +33,11 @@
                     <span>Veterinarians</span>
                 </petclinic:menuItem>
 
+                <petclinic:menuItem active="${name eq 'appointments'}" url="/appointments.html" title="Appointments">
+                    <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                    <span>Appointments</span>
+                </petclinic:menuItem>
+
             </ul>
         </div>
     </div>

@@ -22,6 +22,7 @@ import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
 import org.springframework.samples.petclinic.model.Vet;
+import org.springframework.samples.petclinic.model.Appointment;
 import org.springframework.samples.petclinic.model.Visit;
 
 
@@ -43,6 +44,7 @@ public interface ClinicService {
     void saveVisit(Visit visit) throws DataAccessException;
 
     Collection<Vet> findVets() throws DataAccessException;
+    Collection<Appointment> findAppointments() throws DataAccessException;
 
     void saveOwner(Owner owner) throws DataAccessException;
 

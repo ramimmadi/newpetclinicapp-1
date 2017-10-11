@@ -32,9 +32,14 @@
         <property name="marshaller" ref="marshaller"/>
     </bean>
 
+    <bean id="appointments/appointmentList.xml" class="org.springframework.web.servlet.view.xml.MarshallingView">
+        <property name="marshaller" ref="marshaller"/>
+    </bean>
+
     <oxm:jaxb2-marshaller id="marshaller">
         <!-- Object-XML mapping declared using annotations inside 'Vets' -->
         <oxm:class-to-be-bound name="org.springframework.samples.petclinic.model.Vets"/>
+        <oxm:class-to-be-bound name="org.springframework.samples.petclinic.model.Appointments"/>
     </oxm:jaxb2-marshaller>
 
 </beans>
