@@ -1,0 +1,32 @@
+{
+  "_comment" : "Simple Packer Template using Amazon Linux 2017.03",
+  "variables": {
+    "aws_access_key": "",
+    "aws_secret_key": ""
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "us-east-1",
+    "source_ami": "ami-246ed34c",
+    "instance_type": "t1.micro",
+    "ssh_username": "ec2-user",
+    "ami_name": "petclinic-coe-latest",
+      "tags": {
+          "Name": "petclinic-coe-latest" 
+        }    
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "inline": [
+      "sleep 30",
+      "sudo yum update -y",
+      "sudo yum install tomcat8 -y",
+      "sleep 90",
+      "sudo wget https://s3.amazonaws.com/cloud-front-demo-to-be-deleted-after-29-july/target/petclinic.war",
+      "sudo cp petclinic.war /usr/share/tomcat8/webapps/.",
+      "sudo chkconfig tomcat8 on"
+    ]
+  }]
+}
