@@ -416,6 +416,9 @@
     <profiles>
         <profile>
             <id>HSQLDB</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <db.script>hsqldb</db.script>
                 <jpa.database>HSQL</jpa.database>
@@ -434,9 +437,7 @@
         </profile>
         <profile>
             <id>MySQL</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+            
             <properties>
                 <db.script>mysql</db.script>
                 <jpa.database>MYSQL</jpa.database>
