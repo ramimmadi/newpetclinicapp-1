@@ -1,10 +1,10 @@
 org/springframework/samples/petclinic/web/VisitController.class
 org/springframework/samples/petclinic/repository/jdbc/JdbcPetVisitExtractor.class
 org/springframework/samples/petclinic/repository/jpa/JpaVetRepositoryImpl.class
-org/springframework/samples/petclinic/repository/jdbc/JdbcAppointmentRepositoryImpl.class
 org/springframework/samples/petclinic/model/Person.class
-org/springframework/samples/petclinic/repository/jpa/JpaOwnerRepositoryImpl.class
+org/springframework/samples/petclinic/repository/jdbc/JdbcAppointmentRepositoryImpl.class
 org/springframework/samples/petclinic/model/Visit.class
+org/springframework/samples/petclinic/repository/jpa/JpaOwnerRepositoryImpl.class
 org/springframework/samples/petclinic/repository/springdatajpa/SpringDataAppointmentRepository.class
 org/springframework/samples/petclinic/model/PetType.class
 org/springframework/samples/petclinic/util/CallMonitoringAspect.class
@@ -17,8 +17,8 @@ org/springframework/samples/petclinic/model/Pet.class
 org/springframework/samples/petclinic/repository/jpa/JpaPetRepositoryImpl.class
 org/springframework/samples/petclinic/model/Owner.class
 org/springframework/samples/petclinic/service/ClinicServiceImpl.class
-org/springframework/samples/petclinic/model/Specialty.class
 org/springframework/samples/petclinic/PetclinicInitializer.class
+org/springframework/samples/petclinic/model/Specialty.class
 org/springframework/samples/petclinic/model/Appointment.class
 org/springframework/samples/petclinic/repository/jdbc/JdbcPetRepositoryImpl.class
 org/springframework/samples/petclinic/repository/jdbc/JdbcPet.class
@@ -39,11 +39,11 @@ org/springframework/samples/petclinic/repository/jdbc/JdbcPetRowMapper.class
 org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVisitRepository.class
 org/springframework/samples/petclinic/web/VetController.class
 org/springframework/samples/petclinic/repository/jdbc/JdbcOwnerRepositoryImpl.class
-org/springframework/samples/petclinic/repository/PetRepository.class
 org/springframework/samples/petclinic/model/Vets.class
+org/springframework/samples/petclinic/repository/PetRepository.class
 org/springframework/samples/petclinic/repository/springdatajpa/SpringDataVetRepository.class
-org/springframework/samples/petclinic/repository/jpa/JpaAppointmentRepositoryImpl.class
 org/springframework/samples/petclinic/model/NamedEntity.class
+org/springframework/samples/petclinic/repository/jpa/JpaAppointmentRepositoryImpl.class
 org/springframework/samples/petclinic/repository/jdbc/JdbcVisitRepositoryImpl.class
 org/springframework/samples/petclinic/web/AppointmentController.class
 org/springframework/samples/petclinic/repository/springdatajpa/SpringDataPetRepository.class

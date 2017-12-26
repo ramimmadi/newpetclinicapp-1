@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"><!-- JSPC servlet mappings start -->
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.exception_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.exception_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.welcome_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.welcome_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.appointments.appointmentList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.appointments.appointmentList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.vets.vetList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.vets.vetList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.pets.createOrUpdateVisitForm_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.pets.createOrUpdateVisitForm_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.pets.createOrUpdatePetForm_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.pets.createOrUpdatePetForm_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.owners.ownerDetails_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.owners.ownerDetails_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.owners.ownersList_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.owners.ownersList_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.owners.findOwners_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.owners.findOwners_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.owners.createOrUpdateOwnerForm_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.WEB_002dINF.jsp.owners.createOrUpdateOwnerForm_jsp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.exception_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/exception.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.welcome_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/welcome.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.appointments.appointmentList_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/appointments/appointmentList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.vets.vetList_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/vets/vetList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.pets.createOrUpdateVisitForm_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/pets/createOrUpdateVisitForm.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.pets.createOrUpdatePetForm_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/pets/createOrUpdatePetForm.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.owners.ownerDetails_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/owners/ownerDetails.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.owners.ownersList_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/owners/ownersList.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.owners.findOwners_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/owners/findOwners.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.WEB_002dINF.jsp.owners.createOrUpdateOwnerForm_jsp</servlet-name>
+        <url-pattern>/WEB-INF/jsp/owners/createOrUpdateOwnerForm.jsp</url-pattern>
+    </servlet-mapping>
+
+<!-- JSPC servlet mappings end -->
+
+</web-app>
