@@ -416,9 +416,7 @@
     <profiles>
         <profile>
             <id>HSQLDB</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+
             <properties>
                 <db.script>hsqldb</db.script>
                 <jpa.database>HSQL</jpa.database>
@@ -437,14 +435,17 @@
         </profile>
         <profile>
             <id>MySQL</id>
+             <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>                     
             
             <properties>
                 <db.script>mysql</db.script>
                 <jpa.database>MYSQL</jpa.database>
                 <jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-                <jdbc.url>jdbc:mysql://logindemodb.c0fjlxlrwls9.us-east-1.rds.amazonaws.com:3306/petclinic?useUnicode=true</jdbc.url>
+                <jdbc.url>jdbc:mysql://localhost:3306/petclinic?useUnicode=true</jdbc.url>
                 <jdbc.username>root</jdbc.username>
-                <jdbc.password>root1234</jdbc.password>
+                <jdbc.password>petclinic</jdbc.password>
             </properties>
             <dependencies>
                 <dependency>
