@@ -18,7 +18,7 @@
     <context:component-scan
         base-package="org.springframework.samples.petclinic.service"/>
 
-    <!-- Configurer that replaces MavenProject: org.springframework.samples:spring-petclinic:4.3.6 @ /home/mani/newpetclinicapp/pom.xml placeholders with values from a properties file -->
+    <!-- Configurer that replaces MavenProject: org.springframework.samples:spring-petclinic:4.3.6 @ /home/immadi_ramaingeswararao/newpetclinicapp-1/pom.xml placeholders with values from a properties file -->
     <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
     <context:property-placeholder location="classpath:spring/data-access.properties" system-properties-mode="OVERRIDE"/>
 
@@ -38,7 +38,7 @@
               p:dataSource-ref="dataSource">
             <property name="jpaVendorAdapter">
                 <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
-                      p:database="MYSQL" p:showSql="${jpa.showSql}"/>
+                      p:database="HSQL" p:showSql="${jpa.showSql}"/>
                 <!-- the 'database' parameter refers to the database dialect being used.
                 	By default, Hibernate will use a 'HSQL' dialect because 'jpa.database' has been set to 'HSQL'
                 	inside file spring/data-access.properties
