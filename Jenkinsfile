@@ -108,7 +108,7 @@ pipeline {
  
  post {
         success {
-            mail to:"immadi.ramaingeswararao@cognizant.com,ramueswari123@gmail.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "all the stages are successful expect the deployment in dev in few moments"
+            mail to:"ramueswari123@gmail.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "all the stages are successful expect the deployment in dev in few moments"
         }
         failure {
             mail to:"ramueswari123@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Pipeline broke please check what went wrong."
